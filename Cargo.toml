@@ -1,0 +1,19 @@
+# https://doc.rust-lang.org/cargo/reference/manifest.html#the-package-section
+[package]
+name = "wsl-gpg-ssh-pageant"
+description = "A GPG/SSH pageant for Windows Subsystem for Linux (WSL)"
+version = "0.1.0"
+authors = ["Jonathan Hiles <jonathan@hil.es>"]
+keywords = ["wsl", "gpg", "ssh", "pageant", "yubikey"]
+categories = ["authentication", "command-line-utilities", "hardware-support"]
+license = "MIT"
+edition = "2021"
+
+# https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html
+[dependencies]
+clap = { version = "4.0.29", features = ["derive"] }
+
+# https://doc.rust-lang.org/cargo/reference/specifying-dependencies.html#development-dependencies
+[dev-dependencies]
+assert_cmd = "2.0.7"
+predicates = "2.1.4"
